@@ -86,17 +86,17 @@ function SalesAnalytics() {
         profitResponse,
       ] = await Promise.all([
         axios.get(
-          'http://127.0.0.1:8000/api/analytics/monthly-sales',
+          '/api/analytics/monthly-sales',
           { params }
         ),
 
         axios.get(
-          'http://127.0.0.1:8000/api/analytics/category-sales',
+          '/api/analytics/category-sales',
           { params }
         ),
 
         axios.get(
-          'http://127.0.0.1:8000/api/analytics/category-profit',
+          '/api/analytics/category-profit',
           { params }
         ),
       ])

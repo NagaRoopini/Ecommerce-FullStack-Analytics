@@ -55,7 +55,7 @@ function Register({ setPage }) {
       setLoading(true)
 
       await axios.post(
-        'http://127.0.0.1:8000/api/auth/register',
+        '/api/auth/register',
         {
           name: name.trim(),
           email: email.trim().toLowerCase(),

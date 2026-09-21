@@ -47,7 +47,7 @@ function Orders() {
       if (endDate) params.end_date = endDate
 
       const response = await axios.get(
-        'http://127.0.0.1:8000/api/orders',
+        '/api/orders',
         {
           params,
         }

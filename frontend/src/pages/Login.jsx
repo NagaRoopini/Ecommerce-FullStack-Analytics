@@ -29,7 +29,7 @@ function Login({ setPage }) {
       setLoading(true)
 
       const response = await axios.post(
-        'http://127.0.0.1:8000/api/auth/login',
+        '/api/auth/login',
         {
           email: email.trim().toLowerCase(),
           password: password,
@@ -130,16 +130,13 @@ function Login({ setPage }) {
             {/* Show / Hide Button */}
             <button
               type="button"
-              onClick={() =>
-                setShowPassword(!showPassword)
-              }
+              onClick={() => setShowPassword(!showPassword)}
               className="absolute right-3 top-1/2 -translate-y-1/2 text-sm font-medium text-blue-600 hover:text-blue-800"
             >
               {showPassword ? 'Hide' : 'Show'}
             </button>
 
           </div>
-
           {/* Login Button */}
           <button
             type="submit"

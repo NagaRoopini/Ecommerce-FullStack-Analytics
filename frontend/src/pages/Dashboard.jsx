@@ -97,27 +97,27 @@ function Dashboard({ setPage }) {
         productsResponse,
       ] = await Promise.all([
         axios.get(
-          'http://127.0.0.1:8000/api/analytics/summary',
+          '/api/analytics/summary',
           { params }
         ),
 
         axios.get(
-          'http://127.0.0.1:8000/api/analytics/monthly-sales',
+          '/api/analytics/monthly-sales',
           { params }
         ),
 
         axios.get(
-          'http://127.0.0.1:8000/api/analytics/category-sales',
+          '/api/analytics/category-sales',
           { params }
         ),
 
         axios.get(
-          'http://127.0.0.1:8000/api/analytics/region-sales',
+          '/api/analytics/region-sales',
           { params }
         ),
 
         axios.get(
-          'http://127.0.0.1:8000/api/analytics/top-products',
+          '/api/analytics/top-products',
           { params }
         ),
       ])
